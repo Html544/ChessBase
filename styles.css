@@ -1,0 +1,54 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333; /* Chess board border */
+}
+
+.row {
+    display: flex;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333; /* Border for each square */
+}
+
+.dark {
+    background-color: black; /* Dark square color */
+    color: white; /* Text color for contrast */
+}
+
+.light {
+    background-color: white; /* Light square color */
+}
+
+/* Correct alternating colors */
+.row:nth-child(odd) .square:nth-child(odd) {
+    background-color: white; /* Light square */
+}
+
+.row:nth-child(odd) .square:nth-child(even) {
+    background-color: black; /* Dark square */
+}
+
+.row:nth-child(even) .square:nth-child(odd) {
+    background-color: black; /* Dark square */
+}
+
+.row:nth-child(even) .square:nth-child(even) {
+    background-color: white; /* Light square */
+}
